@@ -1,0 +1,87 @@
+body: Container(
+          color: Colors.deepPurple,
+          margin: EdgeInsets.all(12),
+          
+              child: Text(
+                "Container",
+                style: TextStyle(
+                  color: Color.fromARGB(255, 243, 15, 15),
+                  fontSize: 24,
+                  fontStyle: FontStyle.normal,
+                  fontWeight: FontWeight.w900,
+                  
+                ),
+                textAlign: TextAlign.center,
+                 
+          ),
+          height: 250,
+          width: 250,
+        ),
+
+
+
+        //////
+
+
+        appBar: AppBar(
+          title: Text("Widget Practice"),
+        ),
+        body: Container(
+          color: Colors.amber,
+          // height: 200,
+          width: MediaQuery.of(context).size.width,
+          child: Column(
+            children: const [
+              Text("Container"),
+              SizedBox(
+                  // height: 25,
+                  ),
+              Text("data"),
+            ],
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          ),
+        ),
+
+
+        ////
+
+
+        child: Padding(
+          padding: const EdgeInsets.all(10.0),
+          child: Image.network(
+            "https://thumbs.dreamstime.com/b/lord-murugan-statue-27279321.jpg",
+            height: 200,
+            width: 200,
+          ),
+        ),
+
+        //////
+
+        InkWell(
+              onTap:() {
+                print("Clicked.....");
+              },
+            ), 
+
+
+
+            CircleAvatar(
+              maxRadius: 100,
+              backgroundImage: NetworkImage(
+                "https://thumbs.dreamstime.com/b/lord-murugan-statue-27279321.jpg",
+              ),
+              child: Center(
+                child: Text(
+                  "Murugan",
+                  style: TextStyle(
+                    fontSize: 34,
+                  ),
+                ),
+              ),
+              // radius: 100,
+            ),
+            Image.network(
+              "https://thumbs.dreamstime.com/b/lord-murugan-statue-27279321.jpg",
+              height: 200,
+              width: 200,
+            ),

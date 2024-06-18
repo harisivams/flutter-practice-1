@@ -15,26 +15,33 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text("Example"),
-        ),
-        body: Container(
-          color: Colors.deepPurple,
-          margin: EdgeInsets.all(12),
-          child: Center(
-            child: Text(
-              "Container",
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 24,
-                
-              ),
-            ),
-          ),
-          height: 250,
-          width: 250,
-        ),
+      home: HomePage(),
+    );
+  }
+}
+
+class HomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Widget Practice"),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: InkWell(
+          child: Text("Click me",
+          style: TextStyle(
+            fontSize: 30,
+            color: Colors.green,
+          ),),
+          onTap:() {
+            var a=3,b=5;
+                for(int i=1;i<b;i++){
+                  print(i+1);
+                }
+              },
+        )
       ),
     );
   }
